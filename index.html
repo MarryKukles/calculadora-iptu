@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calculadora de IPTU Proporcional</title>
+
+    <!-- Favicon do site -->
+    <link rel="icon" type="image/png" href="https://pl.mg.gov.br/wp-content/uploads/2026/02/Solicitar-Revisao-Isencao-ou-Reducao-do-IPTU-630x630.png">
 
     <style>
         * {
@@ -287,7 +291,6 @@
 
         </section>
 
-
         <!-- PARTE 2 -->
         <section class="card">
 
@@ -372,7 +375,6 @@
 
         </section>
 
-
         <!-- PARTE 3 -->
         <section class="card">
 
@@ -429,7 +431,6 @@
 
         </section>
 
-
         <button
             class="clear-button"
             onclick="limparCalculadora()"
@@ -443,7 +444,6 @@
 
     </div>
 
-
     <script>
 
         // Formatação de valores em reais
@@ -456,7 +456,6 @@
 
         }
 
-
         // Obtém os valores dos campos
         function obterValor(id) {
 
@@ -467,7 +466,6 @@
             return Number.isFinite(valor) ? valor : 0;
 
         }
-
 
         // Realiza todos os cálculos
         function calcular() {
@@ -486,7 +484,6 @@
 
             document.getElementById('resultadoMensal').textContent =
                 formatarMoeda(valorMensal);
-
 
             // =====================================
             // PARTE 2 - VALOR DO IPTU PROPORCIONAL
@@ -518,7 +515,6 @@
             document.getElementById('resultadoProporcional').textContent =
                 formatarMoeda(valorProporcional);
 
-
             // =====================================
             // PARTE 3 - IPTU PROPORCIONAL A JANEIRO
             // =====================================
@@ -538,14 +534,12 @@
 
         }
 
-
         // Atualização automática ao preencher os campos
         document.getElementById('valorBoleto')
             .addEventListener('input', calcular);
 
         document.getElementById('quantidadeParcelas')
             .addEventListener('input', calcular);
-
 
         // Limpar e reiniciar a calculadora
         function limparCalculadora() {
@@ -558,7 +552,6 @@
             document.getElementById('valorBoleto').focus();
 
         }
-
 
         // Inicialização
         calcular();
